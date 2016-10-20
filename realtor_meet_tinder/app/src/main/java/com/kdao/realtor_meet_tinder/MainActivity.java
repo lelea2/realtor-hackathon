@@ -81,17 +81,18 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
             @Override
             public void onLeftCardExit(Object dataObject) {
-                al.remove(0);
-                myAppAdapter.notifyDataSetChanged();
-                //Do something on the left!
-                //You also have access to the original object.
-                //If you want to use it just cast it (String) dataObject
+                if (al.size() > 1) {
+                    al.remove(0);
+                    myAppAdapter.notifyDataSetChanged();
+                }
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                al.remove(0);
-                myAppAdapter.notifyDataSetChanged();
+                if (al.size() > 1) {
+                    al.remove(0);
+                    myAppAdapter.notifyDataSetChanged();
+                }
             }
 
             @Override
@@ -100,6 +101,9 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
             @Override
             public void onScroll(float scrollProgressPercent) {
+                if (al.size() <= 1) { //dont do anything with the last card which is ads
+                    return;
+                }
                 View view = flingContainer.getSelectedView();
 //                view.findViewById(R.id.background).setAlpha(0);
                 view.findViewById(R.id.item_swipe_right_indicator).setAlpha(scrollProgressPercent < 0 ? -scrollProgressPercent : 0);
