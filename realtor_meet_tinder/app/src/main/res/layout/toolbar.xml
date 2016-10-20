@@ -5,7 +5,7 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
-    android:background="?attr/colorPrimary"
+    android:background="@color/colorWhite"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     app:layout_scrollFlags="scroll|enterAlways"
     app:layout_collapseMode="pin">
@@ -13,12 +13,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <ImageView
+            android:id="@+id/back"
+            android:src="@drawable/go_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="0dp"
+            android:layout_gravity="left" />
+        <ImageView
             android:id="@+id/toolbar_logo"
-            android:src="@drawable/realtor_logo"
+            android:src="@drawable/logo"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_marginTop="4dp"
             android:layout_marginBottom="4dp"
             android:layout_gravity="center" />
+        <ImageView
+            android:id="@+id/filter"
+            android:src="@drawable/filter"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="right" />
     </FrameLayout>
 </android.support.v7.widget.Toolbar>

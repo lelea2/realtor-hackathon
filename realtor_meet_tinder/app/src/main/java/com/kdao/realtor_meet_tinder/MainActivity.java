@@ -166,9 +166,12 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 if (tabId == R.id.tab_favorites) {
                     // The tab with id R.id.tab_favorites was selected,
                     // change your content accordingly.
-                    System.out.println("Go to favorite page");
                     Intent newIntent = new Intent(MainActivity.this, MyOffersActivity.class);
                     startActivity(newIntent);
+                } else if (tabId == R.id.tab_messages) {
+                    Intent newIntent = new Intent(MainActivity.this, ConversationActivity.class);
+                    startActivity(newIntent);
+                } else if(tabId == R.id.tab_home) {
                 }
             }
         });
