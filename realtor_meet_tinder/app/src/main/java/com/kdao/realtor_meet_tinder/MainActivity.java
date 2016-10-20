@@ -24,6 +24,7 @@ import com.bumptech.glide.Glide;
 import com.kdao.realtor_meet_tinder.swipecard.FlingCardListener;
 import com.kdao.realtor_meet_tinder.swipecard.SwipeFlingAdapterView;
 import com.kdao.realtor_meet_tinder.util.Data;
+import com.kdao.realtor_meet_tinder.util.Common;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -198,7 +199,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 viewHolder = (ViewHolder) convertView.getTag();
             }
             viewHolder.AddressText.setText(offerList.get(position).getAddress() + "");
-            viewHolder.PriceText.setText(offerList.get(position).getPrice() + "");
+            viewHolder.PriceText.setText("$" + Common.priceToString((double) offerList.get(position).getPrice()) + "");
             viewHolder.DescText.setText(offerList.get(position).getDescription() + "");
             Glide.with(MainActivity.this).load(offerList.get(position).getImagePath()).into(viewHolder.cardImage);
             return rowView;
