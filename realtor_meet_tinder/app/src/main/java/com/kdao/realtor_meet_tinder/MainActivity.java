@@ -3,6 +3,8 @@ package com.kdao.realtor_meet_tinder;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -29,20 +31,15 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     private SwipeFlingAdapterView flingContainer;
 
     public static void removeBackground() {
-
-
         viewHolder.background.setVisibility(View.GONE);
         myAppAdapter.notifyDataSetChanged();
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
-
         al = new ArrayList<>();
         al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
         al.add(new Data("http://ap.rdcpix.com/370742724/f144f3c038d94ebe090425dbe30e3a73l-m0xd-w480_h480_q80.jpg", "11002 Canyon Vista Dr, Cupertino, CA 95014"));
@@ -68,12 +65,10 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 //Do something on the left!
                 //You also have access to the original object.
                 //If you want to use it just cast it (String) dataObject
-
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-
                 al.remove(0);
                 myAppAdapter.notifyDataSetChanged();
             }
@@ -85,7 +80,6 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
             @Override
             public void onScroll(float scrollProgressPercent) {
-
                 View view = flingContainer.getSelectedView();
                 view.findViewById(R.id.background).setAlpha(0);
                 view.findViewById(R.id.item_swipe_right_indicator).setAlpha(scrollProgressPercent < 0 ? -scrollProgressPercent : 0);
@@ -98,35 +92,40 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         flingContainer.setOnItemClickListener(new SwipeFlingAdapterView.OnItemClickListener() {
             @Override
             public void onItemClicked(int itemPosition, Object dataObject) {
-
                 View view = flingContainer.getSelectedView();
                 view.findViewById(R.id.background).setAlpha(0);
-
                 myAppAdapter.notifyDataSetChanged();
             }
         });
+    }
 
+    private void setupAppBar() {
+        // Always cast your custom Toolbar here, and set it as the ActionBar.
+        Toolbar tb = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(tb);
+
+        // Get the ActionBar here to configure the way it behaves.
+        final ActionBar ab = getSupportActionBar();
+        //ab.setHomeAsUpIndicator(R.drawable.ic_menu); // set a custom icon for the default home button
+        ab.setDisplayShowHomeEnabled(true); // show or hide the default home button
+        ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayShowCustomEnabled(true); // enable overriding the default toolbar layout
+        ab.setDisplayShowTitleEnabled(false); // disable the default title element here (for centered title)
     }
 
     @Override
     public void onActionDownPerform() {
         Log.e("action", "bingo");
     }
-
     public static class ViewHolder {
         public static FrameLayout background;
         public TextView DataText;
         public ImageView cardImage;
-
-
     }
 
     public class MyAppAdapter extends BaseAdapter {
-
-
         public List<Data> parkingList;
         public Context context;
-
         private MyAppAdapter(List<Data> apps, Context context) {
             this.parkingList = apps;
             this.context = context;

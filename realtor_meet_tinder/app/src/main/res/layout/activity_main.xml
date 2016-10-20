@@ -5,17 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorLightPink"
+    android:background="@color/colorLightGray"
     tools:context=".MainActivity">
+    <!-- Include the AppBarLayout -->
+    <include layout="@layout/appbar" />
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background">
+        android:background="@color/colorLightGray">
         <com.kdao.realtor_meet_tinder.swipecard.SwipeFlingAdapterView
             android:id="@+id/frame"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/background"
+            android:background="@color/colorLightGray"
             app:rotation_degrees="15.5" />
     </FrameLayout>
 </LinearLayout>

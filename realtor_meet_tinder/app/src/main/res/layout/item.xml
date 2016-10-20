@@ -7,13 +7,12 @@
     android:layout_marginBottom="48dp"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
-    android:layout_marginTop="64dp">
+    android:layout_marginTop="40dp">
 
     <FrameLayout
         android:id="@+id/background"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -23,7 +22,6 @@
             android:background="@drawable/shape2"
             android:gravity="center_horizontal"
             android:orientation="vertical" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -33,7 +31,6 @@
             android:background="@drawable/shape1"
             android:gravity="center_horizontal"
             android:orientation="vertical" />
-
     </FrameLayout>
 
     <LinearLayout

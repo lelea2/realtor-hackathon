@@ -6,4 +6,5 @@
     <color name="colorTextPrimary">#fff</color>
     <color name="colorTextSecondary">#fff</color>
     <color name="colorLightPink">#ffebee</color>
+    <color name="colorLightGray">#eceff1</color>
 </resources>
