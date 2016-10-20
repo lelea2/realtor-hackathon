@@ -14,6 +14,12 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import android.support.annotation.IdRes;
+import android.support.annotation.Nullable;
+import com.roughike.bottombar.BottomBar;
+import com.roughike.bottombar.OnTabReselectListener;
+import com.roughike.bottombar.OnTabSelectListener;
+
 import com.bumptech.glide.Glide;
 import com.kdao.realtor_meet_tinder.swipecard.FlingCardListener;
 import com.kdao.realtor_meet_tinder.swipecard.SwipeFlingAdapterView;
@@ -39,6 +45,10 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //set up bar
+        setupAppBar();
+        setupBottomBar();
+
         flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
         al = new ArrayList<>();
         al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
@@ -99,6 +109,9 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         });
     }
 
+    /**
+     * Private function to set up top app bar
+     */
     private void setupAppBar() {
         // Always cast your custom Toolbar here, and set it as the ActionBar.
         Toolbar tb = (Toolbar) findViewById(R.id.toolbar);
@@ -107,15 +120,31 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         // Get the ActionBar here to configure the way it behaves.
         final ActionBar ab = getSupportActionBar();
         //ab.setHomeAsUpIndicator(R.drawable.ic_menu); // set a custom icon for the default home button
-        ab.setDisplayShowHomeEnabled(true); // show or hide the default home button
-        ab.setDisplayHomeAsUpEnabled(true);
-        ab.setDisplayShowCustomEnabled(true); // enable overriding the default toolbar layout
-        ab.setDisplayShowTitleEnabled(false); // disable the default title element here (for centered title)
+//        ab.setDisplayShowHomeEnabled(true); // show or hide the default home button
+//        ab.setDisplayHomeAsUpEnabled(true);
+//        ab.setDisplayShowCustomEnabled(true); // enable overriding the default toolbar layout
+//        ab.setDisplayShowTitleEnabled(false); // disable the default title element here (for centered title)
+    }
+
+    /**
+     * Private function to set up bottom bar
+     */
+    private void setupBottomBar() {
+        BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
+            @Override
+            public void onTabSelected(@IdRes int tabId) {
+                if (tabId == R.id.tab_favorites) {
+                    // The tab with id R.id.tab_favorites was selected,
+                    // change your content accordingly.
+                }
+            }
+        });
     }
 
     @Override
     public void onActionDownPerform() {
-        Log.e("action", "bingo");
+        Log.e("action", "down touchhhh hah");
     }
     public static class ViewHolder {
         public static FrameLayout background;

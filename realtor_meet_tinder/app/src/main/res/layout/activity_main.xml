@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,6 +13,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         android:background="@color/colorLightGray">
         <com.kdao.realtor_meet_tinder.swipecard.SwipeFlingAdapterView
             android:id="@+id/frame"
@@ -21,4 +22,26 @@
             android:background="@color/colorLightGray"
             app:rotation_degrees="15.5" />
     </FrameLayout>
-</LinearLayout>
+
+    <!-- Include botton bar -->
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:bb_tabXmlResource="@xml/bottombar_tabs_three" />
+
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_toRightOf="@id/bottomBar"-->
+        <!--android:background="@color/colorLightGray">-->
+        <!--<com.kdao.realtor_meet_tinder.swipecard.SwipeFlingAdapterView-->
+            <!--android:id="@+id/frame"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/colorLightGray"-->
+            <!--app:rotation_degrees="15.5" />-->
+    <!--</FrameLayout>-->
+
+</RelativeLayout>

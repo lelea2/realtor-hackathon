@@ -7,4 +7,5 @@
     <color name="colorTextSecondary">#fff</color>
     <color name="colorLightPink">#ffebee</color>
     <color name="colorLightGray">#eceff1</color>
+    <color name="colorTextGray">#787878</color>
 </resources>
