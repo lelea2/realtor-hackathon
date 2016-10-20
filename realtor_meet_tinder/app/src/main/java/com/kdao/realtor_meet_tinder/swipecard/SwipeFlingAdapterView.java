@@ -208,15 +208,12 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
             mActiveCard = getChildAt(LAST_OBJECT_IN_STACK);
             if (mActiveCard != null) {
 
-                flingCardListener = new FlingCardListener(mActiveCard, mAdapter.getItem(0),
-                        ROTATION_DEGREES, new FlingCardListener.FlingListener() {
-
+                flingCardListener = new FlingCardListener(mActiveCard, mAdapter.getItem(0), ROTATION_DEGREES, new FlingCardListener.FlingListener() {
                     @Override
                     public void onCardExited() {
                         mActiveCard = null;
                         mFlingListener.removeFirstObjectInAdapter();
                     }
-
                     @Override
                     public void leftExit(Object dataObject) {
                         mFlingListener.onLeftCardExit(dataObject);
@@ -307,6 +304,10 @@ public class SwipeFlingAdapterView extends BaseFlingAdapterView {
         void onLeftCardExit(Object dataObject);
 
         void onRightCardExit(Object dataObject);
+
+//        void onTopCardExit(Object dataObject);
+//
+//        void onBottomCardExit(Object dataObject);
 
         void onAdapterAboutToEmpty(int itemsInAdapter);
 

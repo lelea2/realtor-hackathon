@@ -64,12 +64,9 @@ public class FlingCardListener implements View.OnTouchListener {
 
         switch (event.getAction() & MotionEvent.ACTION_MASK) {
             case MotionEvent.ACTION_DOWN:
-
                 // from http://android-developers.blogspot.com/2010/06/making-sense-of-multitouch.html
                 // Save the ID of this pointer
                 MainActivity.removeBackground();
-
-
                 mActivePointerId = event.getPointerId(0);
                 float x = 0;
                 float y = 0;
@@ -224,9 +221,7 @@ public class FlingCardListener implements View.OnTouchListener {
     }
 
 
-    public void onSelected(final boolean isLeft,
-                           float exitY, long duration) {
-
+    public void onSelected(final boolean isLeft, float exitY, long duration) {
         isAnimationRunning = true;
         float exitX;
         if (isLeft) {

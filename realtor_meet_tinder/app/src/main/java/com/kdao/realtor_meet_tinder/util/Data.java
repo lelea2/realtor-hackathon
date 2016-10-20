@@ -3,11 +3,11 @@ package com.kdao.realtor_meet_tinder.util;
 public class Data {
 
     private String description;
-    private String imagePath;
+    private int imagePath;
     private String address;
     private int price;
 
-    public Data(String imagePath, String address, int price, String description) {
+    public Data(int imagePath, String address, int price, String description) {
         this.imagePath = imagePath;
         this.address = address;
         this.price = price;
@@ -18,7 +18,7 @@ public class Data {
         return description;
     }
 
-    public String getImagePath() {
+    public int getImagePath() {
         return imagePath;
     }
 
