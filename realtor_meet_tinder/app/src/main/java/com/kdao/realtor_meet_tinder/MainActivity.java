@@ -44,12 +44,15 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
 
         al = new ArrayList<>();
-        al.add(new Data("http://i.ytimg.com/vi/PnxsTxV8y3g/maxresdefault.jpg", "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."));
-        al.add(new Data("http://switchboard.nrdc.org/blogs/dlashof/mission_impossible_4-1.jpg", "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."));
-        al.add(new Data("http://i.ytimg.com/vi/PnxsTxV8y3g/maxresdefault.jpg", "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."));
-        al.add(new Data("http://switchboard.nrdc.org/blogs/dlashof/mission_impossible_4-1.jpg", "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."));
-        al.add(new Data("http://i.ytimg.com/vi/PnxsTxV8y3g/maxresdefault.jpg", "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness."));
-
+        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
+        al.add(new Data("http://ap.rdcpix.com/370742724/f144f3c038d94ebe090425dbe30e3a73l-m0xd-w480_h480_q80.jpg", "11002 Canyon Vista Dr, Cupertino, CA 95014"));
+        al.add(new Data("http://ap.rdcpix.com/1932726199/b9803583e6d8afb40e05fdc255a4f36el-m0xd-w480_h480_q80.jpg", "22923 Longdown Rd, Cupertino, CA 95014"));
+        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
+        al.add(new Data("http://ap.rdcpix.com/370742724/f144f3c038d94ebe090425dbe30e3a73l-m0xd-w480_h480_q80.jpg", "11002 Canyon Vista Dr, Cupertino, CA 95014"));
+        al.add(new Data("http://ap.rdcpix.com/1932726199/b9803583e6d8afb40e05fdc255a4f36el-m0xd-w480_h480_q80.jpg", "22923 Longdown Rd, Cupertino, CA 95014"));
+        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
+        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
+        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
         myAppAdapter = new MyAppAdapter(al, MainActivity.this);
         flingContainer.setAdapter(myAppAdapter);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
@@ -148,7 +151,6 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         public View getView(final int position, View convertView, ViewGroup parent) {
 
             View rowView = convertView;
-
 
             if (rowView == null) {
 
