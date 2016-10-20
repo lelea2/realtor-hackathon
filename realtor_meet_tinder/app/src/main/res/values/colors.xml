@@ -8,4 +8,6 @@
     <color name="colorLightPink">#ffebee</color>
     <color name="colorLightGray">#eceff1</color>
     <color name="colorTextGray">#787878</color>
+    <color name="colorTextBlue">#0099cc</color>
+    <color name="colorTextBlack">#333</color>
 </resources>

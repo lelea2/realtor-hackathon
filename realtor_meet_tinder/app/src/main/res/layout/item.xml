@@ -57,22 +57,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="top|center_horizontal"
-            android:orientation="horizontal">
-
-            <ScrollView
+            android:orientation="vertical">
+            <TextView android:id="@+id/address"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:id="@+id/bookText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="left"
-                    android:padding="4dp"
-                    android:textColor="@color/colorTextGray"
-                    android:textSize="16dp"
-                    tools:text="Me likes you but love Totoro and Harley the most" />
-            </ScrollView>
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:textColor="@color/colorTextBlue"
+                android:textSize="@dimen/font_medium_sm"
+                tools:text="Address" />
+            <TextView android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:textColor="@color/colorTextBlack"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_medium"
+                tools:text="$1,000,000" />
+            <TextView android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:textColor="@color/colorTextGray"
+                android:textStyle="bold"
+                android:textSize="@dimen/font_base"
+                tools:text="4 beds  3 full , 1 half baths 3,721 sq ft9,374 sq ft lot" />
+                />
         </LinearLayout>
     </LinearLayout>
     <View

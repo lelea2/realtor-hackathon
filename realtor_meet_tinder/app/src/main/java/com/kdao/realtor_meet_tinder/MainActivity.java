@@ -51,15 +51,15 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 
         flingContainer = (SwipeFlingAdapterView) findViewById(R.id.frame);
         al = new ArrayList<>();
-        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
-        al.add(new Data("http://ap.rdcpix.com/370742724/f144f3c038d94ebe090425dbe30e3a73l-m0xd-w480_h480_q80.jpg", "11002 Canyon Vista Dr, Cupertino, CA 95014"));
-        al.add(new Data("http://ap.rdcpix.com/1932726199/b9803583e6d8afb40e05fdc255a4f36el-m0xd-w480_h480_q80.jpg", "22923 Longdown Rd, Cupertino, CA 95014"));
-        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
-        al.add(new Data("http://ap.rdcpix.com/370742724/f144f3c038d94ebe090425dbe30e3a73l-m0xd-w480_h480_q80.jpg", "11002 Canyon Vista Dr, Cupertino, CA 95014"));
-        al.add(new Data("http://ap.rdcpix.com/1932726199/b9803583e6d8afb40e05fdc255a4f36el-m0xd-w480_h480_q80.jpg", "22923 Longdown Rd, Cupertino, CA 95014"));
-        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
-        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
-        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014"));
+        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014", 3000000, "test"));
+        al.add(new Data("http://ap.rdcpix.com/370742724/f144f3c038d94ebe090425dbe30e3a73l-m0xd-w480_h480_q80.jpg", "11002 Canyon Vista Dr, Cupertino, CA 95014", 3000000, "test"));
+        al.add(new Data("http://ap.rdcpix.com/1932726199/b9803583e6d8afb40e05fdc255a4f36el-m0xd-w480_h480_q80.jpg", "22923 Longdown Rd, Cupertino, CA 95014", 3000000, "test"));
+        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014", 3000000, "test"));
+        al.add(new Data("http://ap.rdcpix.com/370742724/f144f3c038d94ebe090425dbe30e3a73l-m0xd-w480_h480_q80.jpg", "11002 Canyon Vista Dr, Cupertino, CA 95014", 3000000, "test"));
+        al.add(new Data("http://ap.rdcpix.com/1932726199/b9803583e6d8afb40e05fdc255a4f36el-m0xd-w480_h480_q80.jpg", "22923 Longdown Rd, Cupertino, CA 95014", 3000000, "test"));
+        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014", 3000000, "test"));
+        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014", 3000000, "test"));
+        al.add(new Data("http://ap.rdcpix.com/362409781/53f290d3791adca34650b72bee84141al-m0xd-w480_h480_q80.jpg", "873 Ferngrove Dr, Cupertino, CA 95014", 3000000, "test"));
         myAppAdapter = new MyAppAdapter(al, MainActivity.this);
         flingContainer.setAdapter(myAppAdapter);
         flingContainer.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
@@ -148,21 +148,23 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     }
     public static class ViewHolder {
         public static FrameLayout background;
-        public TextView DataText;
+        public TextView AddressText;
+        public TextView PriceText;
+        public TextView DescText;
         public ImageView cardImage;
     }
 
     public class MyAppAdapter extends BaseAdapter {
-        public List<Data> parkingList;
+        public List<Data> offerList;
         public Context context;
         private MyAppAdapter(List<Data> apps, Context context) {
-            this.parkingList = apps;
+            this.offerList = apps;
             this.context = context;
         }
 
         @Override
         public int getCount() {
-            return parkingList.size();
+            return offerList.size();
         }
 
         @Override
@@ -186,18 +188,19 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
                 rowView = inflater.inflate(R.layout.item, parent, false);
                 // configure view holder
                 viewHolder = new ViewHolder();
-                viewHolder.DataText = (TextView) rowView.findViewById(R.id.bookText);
+                viewHolder.AddressText = (TextView) rowView.findViewById(R.id.address);
+                viewHolder.PriceText = (TextView) rowView.findViewById(R.id.price);
+                viewHolder.DescText = (TextView) rowView.findViewById(R.id.detail);
                 viewHolder.background = (FrameLayout) rowView.findViewById(R.id.background);
                 viewHolder.cardImage = (ImageView) rowView.findViewById(R.id.cardImage);
                 rowView.setTag(viewHolder);
-
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
             }
-            viewHolder.DataText.setText(parkingList.get(position).getDescription() + "");
-
-            Glide.with(MainActivity.this).load(parkingList.get(position).getImagePath()).into(viewHolder.cardImage);
-
+            viewHolder.AddressText.setText(offerList.get(position).getAddress() + "");
+            viewHolder.PriceText.setText(offerList.get(position).getPrice() + "");
+            viewHolder.DescText.setText(offerList.get(position).getDescription() + "");
+            Glide.with(MainActivity.this).load(offerList.get(position).getImagePath()).into(viewHolder.cardImage);
             return rowView;
         }
     }

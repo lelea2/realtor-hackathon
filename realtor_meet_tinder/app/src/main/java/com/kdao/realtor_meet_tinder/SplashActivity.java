@@ -16,7 +16,6 @@ public class SplashActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 //nothing
             }
-
             public void onFinish() {
                 Intent i = new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(i);
@@ -24,6 +23,4 @@ public class SplashActivity extends AppCompatActivity {
             }
         }.start();
     }
-
-
 }
