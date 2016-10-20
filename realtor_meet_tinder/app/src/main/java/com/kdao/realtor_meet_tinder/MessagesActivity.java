@@ -8,15 +8,22 @@ import android.os.Bundle;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
-public class ConversationActivity extends AppCompatActivity {
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class MessagesActivity extends AppCompatActivity {
 
     private boolean initialLoad = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_conversation);
+        setContentView(R.layout.activity_messages);
         setupBottomBar();
+        TextView toolbar_logo = (TextView) findViewById(R.id.toolbar_logo);
+        ImageView filter = (ImageView) findViewById(R.id.filter);
+        toolbar_logo.setText(R.string.message);
+//        filter.setBackground(R.drawable);
     }
 
 
@@ -35,13 +42,13 @@ public class ConversationActivity extends AppCompatActivity {
                 if (tabId == R.id.tab_favorites) {
                     // The tab with id R.id.tab_favorites was selected,
                     // change your content accordingly.
-                    Intent newIntent = new Intent(ConversationActivity.this, MyOffersActivity.class);
+                    Intent newIntent = new Intent(MessagesActivity.this, MyOffersActivity.class);
                     startActivity(newIntent);
                 } else if (tabId == R.id.tab_messages) {
 //                    Intent newIntent = new Intent(ConversationActivity.this, ConversationActivity.class);
 //                    startActivity(newIntent);
                 } else if (tabId == R.id.tab_home) {
-                    Intent newIntent = new Intent(ConversationActivity.this, MainActivity.class);
+                    Intent newIntent = new Intent(MessagesActivity.this, MainActivity.class);
                     startActivity(newIntent);
                 }
             }

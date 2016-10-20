@@ -14,18 +14,20 @@
         android:layout_height="match_parent">
         <ImageView
             android:id="@+id/back"
-            android:src="@drawable/hamburger"
+            android:src="@drawable/go_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="0dp"
             android:layout_gravity="left" />
-        <ImageView
+        <TextView
             android:id="@+id/toolbar_logo"
-            android:src="@drawable/logo"
+            android:text="@string/favorite"
+            android:textColor="@color/colorTextBlue"
+            android:textSize="@dimen/font_medium"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="4dp"
             android:layout_gravity="center" />
         <ImageView

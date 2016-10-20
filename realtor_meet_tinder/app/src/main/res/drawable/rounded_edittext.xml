@@ -3,8 +3,8 @@
     <solid android:color="#FFFFFF" />
     <!-- Draw stroke -->
     <stroke
-        android:width="2dp"
-        android:color="#2f6699" />
+        android:width="1dp"
+        android:color="@color/colorLightGray" />
     <corners
         android:topLeftRadius="5dp"
         android:topRightRadius="5dp"

@@ -3,4 +3,11 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="default_zip">94031</string>
+    <string name="favorite">Favorite</string>
+    <string name="message">Message</string>
+    <string name="share">Share</string>
+    <string name="email">Email</string>
+    <string name="in_app_message">In-app Message</string>
+    <string name="sms">SMS</string>
+    <string name="facebook_message">Facebook Messenger</string>
 </resources>

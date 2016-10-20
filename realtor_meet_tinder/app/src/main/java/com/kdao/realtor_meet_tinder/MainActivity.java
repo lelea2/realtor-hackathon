@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
     public static ViewHolder viewHolder;
     private ArrayList<Data> al;
     private SwipeFlingAdapterView flingContainer;
-    private boolean isExit = false;
+    private boolean initialLoad = false;
 
     public static void removeBackground() {
 //        viewHolder.background.setVisibility(View.GONE);
@@ -162,7 +162,10 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
-                System.out.println(">>>>>>>>> tabId: " + tabId);
+                if (initialLoad == true) {
+                    initialLoad = false;
+                    return;
+                }
                 if (tabId == R.id.tab_favorites) {
                     // The tab with id R.id.tab_favorites was selected,
                     // change your content accordingly.

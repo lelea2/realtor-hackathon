@@ -15,25 +15,27 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="4dp"
+        android:paddingLeft="4dp"
         android:background="@android:color/transparent"
         android:weightSum="1"
         android:layout_marginTop="60dp"
         android:id="@+id/zipcode_layout">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight=".25"
-            android:textSize="@dimen/font_medium_sm"
-            android:text="Zipcode" />
         <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/font_medium_sm"
             android:padding="5dp"
+            android:drawableLeft="@drawable/search_style"
             android:background="@drawable/rounded_edittext"
-            android:layout_weight=".75" />
+            android:drawablePadding="5dp"
+            android:text="95120"
+            android:textColor="@color/colorTextBlack"
+            android:inputType="number"
+            android:layout_weight="1" />
     </LinearLayout>
 
     <FrameLayout
