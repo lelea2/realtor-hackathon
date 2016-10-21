@@ -33,6 +33,7 @@ public class MessagesActivity extends AppCompatActivity {
      */
     private void setupBottomBar() {
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        bottomBar.setDefaultTabPosition(2);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {

@@ -77,6 +77,7 @@ public class MyOffersActivity extends AppCompatActivity {
      */
     private void setupBottomBar() {
         BottomBar bottomBar = (BottomBar) findViewById(R.id.bottomBar);
+        bottomBar.setDefaultTabPosition(1);
         bottomBar.setOnTabSelectListener(new OnTabSelectListener() {
             @Override
             public void onTabSelected(@IdRes int tabId) {
@@ -90,7 +91,7 @@ public class MyOffersActivity extends AppCompatActivity {
 //                    Intent newIntent = new Intent(MyOffersActivity.this, MyOffersActivity.class);
 //                    startActivity(newIntent);
                 } else if (tabId == R.id.tab_messages) {
-                    Intent newIntent = new Intent(MyOffersActivity.this, ConversationActivity.class);
+                    Intent newIntent = new Intent(MyOffersActivity.this, MessagesActivity.class);
                     startActivity(newIntent);
                 } else if (tabId == R.id.tab_home) {
                     Intent newIntent = new Intent(MyOffersActivity.this, MainActivity.class);

@@ -8,6 +8,13 @@
 
     <!-- Include the AppBarLayout -->
     <include layout="@layout/toolbar_secondary" />
+    
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/list_view_1" />
 
 
     <!-- Include botton bar -->
