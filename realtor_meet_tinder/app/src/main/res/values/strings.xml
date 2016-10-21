@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">realtor_meet_tinder</string>
+    <string name="app_name">Housely</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="default_zip">94031</string>

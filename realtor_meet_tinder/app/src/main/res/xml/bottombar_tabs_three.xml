@@ -2,14 +2,14 @@
 <tabs>
     <tab
         id="@+id/tab_home"
-        icon="@drawable/ic_nearby"
+        icon="@drawable/profile_cta"
         title="Nearby" />
     <tab
         id="@+id/tab_favorites"
-        icon="@drawable/ic_favorites"
+        icon="@drawable/fav_cta"
         title="Favorites" />
     <tab
         id="@+id/tab_messages"
-        icon="@drawable/ic_friends"
+        icon="@drawable/message_icon"
         title="Friends" />
 </tabs>

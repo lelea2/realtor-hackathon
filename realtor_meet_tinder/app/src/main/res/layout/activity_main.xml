@@ -49,15 +49,17 @@
             android:layout_height="match_parent"
             android:background="@color/colorLightGray"
             app:rotation_degrees="15.5" />
+
+        <com.roughike.bottombar.BottomBar
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            app:bb_tabXmlResource="@xml/bottombar_tabs_three"
+            android:layout_gravity="right|bottom" />
     </FrameLayout>
 
     <!-- Include botton bar -->
-    <com.roughike.bottombar.BottomBar
-        android:id="@+id/bottomBar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        app:bb_tabXmlResource="@xml/bottombar_tabs_three" />
 
     <!--<FrameLayout-->
         <!--android:layout_width="match_parent"-->
