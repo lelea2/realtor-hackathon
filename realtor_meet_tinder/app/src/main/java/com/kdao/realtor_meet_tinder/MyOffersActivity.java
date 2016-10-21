@@ -100,4 +100,9 @@ public class MyOffersActivity extends AppCompatActivity {
             }
         });
     }
+
+    public void goBack(View v) {
+        Intent newIntent = new Intent(MyOffersActivity.this, MainActivity.class);
+        startActivity(newIntent);
+    }
 }

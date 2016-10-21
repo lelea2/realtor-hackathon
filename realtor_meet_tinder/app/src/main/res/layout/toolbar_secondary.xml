@@ -19,7 +19,8 @@
             android:layout_height="30dp"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="0dp"
-            android:layout_gravity="left" />
+            android:layout_gravity="left"
+            android:onClick="goBack" />
         <TextView
             android:id="@+id/toolbar_logo"
             android:text="@string/favorite"

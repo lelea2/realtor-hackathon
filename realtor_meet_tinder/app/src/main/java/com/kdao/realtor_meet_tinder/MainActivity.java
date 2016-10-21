@@ -108,9 +108,13 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 //                view.findViewById(R.id.background).setAlpha(0);
                 view.findViewById(R.id.item_swipe_right_indicator).setAlpha(scrollProgressPercent < 0 ? -scrollProgressPercent : 0);
                 view.findViewById(R.id.item_swipe_left_indicator).setAlpha(scrollProgressPercent > 0 ? scrollProgressPercent : 0);
-                System.out.println(">>>>>>>>> scrollPercentage <<<<<<<<<<<" + scrollProgressPercent);
-                if (scrollProgressPercent < 0.25 && scrollProgressPercent > 0.2) {
-                    shareAction();
+//                System.out.println(">>>>>>>>> scrollPercentage <<<<<<<<<<<" + scrollProgressPercent);
+//                if (scrollProgressPercent < 0.25 && scrollProgressPercent > 0.2) {
+//                    shareAction();
+//                }
+                if (scrollProgressPercent > 0.2) {
+                    Intent newIntent = new Intent(MainActivity.this, ConversationActivity.class);
+                    startActivity(newIntent);
                 }
             }
         });

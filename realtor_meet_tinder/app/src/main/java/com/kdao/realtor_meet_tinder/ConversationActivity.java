@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 
+import android.view.View;
+
 public class ConversationActivity extends AppCompatActivity {
 
     private boolean initialLoad = true;
@@ -50,5 +52,10 @@ public class ConversationActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void goBack(View v) {
+        Intent newIntent = new Intent(ConversationActivity.this, MyOffersActivity.class);
+        startActivity(newIntent);
     }
 }

@@ -64,4 +64,9 @@ public class MessagesActivity extends AppCompatActivity {
         Intent newIntent = new Intent(MessagesActivity.this, ConversationActivity.class);
         startActivity(newIntent);
     }
+
+    public void goBack(View v) {
+        Intent newIntent = new Intent(MessagesActivity.this, MainActivity.class);
+        startActivity(newIntent);
+    }
 }
