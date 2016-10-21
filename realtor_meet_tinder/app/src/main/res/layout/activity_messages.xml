@@ -9,12 +9,22 @@
     <!-- Include the AppBarLayout -->
     <include layout="@layout/toolbar_secondary" />
 
-    <ListView
-        android:id="@+id/offer_list"
-        android:layout_marginTop="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:orientation="vertical"
+        android:background="@color/colorWhite">
+        <ImageView
+            android:id="@+id/offer_list"
+            android:layout_width="wrap_content"
+            android:layout_height="240dp"
+            android:background="@drawable/message_view"
+            android:onClick="handleViewDetail" />
+    </LinearLayout>
+
 
     <!-- Include botton bar -->
     <com.roughike.bottombar.BottomBar

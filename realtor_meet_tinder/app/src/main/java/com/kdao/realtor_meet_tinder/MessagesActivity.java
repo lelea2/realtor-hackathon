@@ -10,6 +10,7 @@ import com.roughike.bottombar.OnTabSelectListener;
 
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.view.View;
 
 public class MessagesActivity extends AppCompatActivity {
 
@@ -53,5 +54,13 @@ public class MessagesActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    /**
+     * Public helper to handle view conversation details
+     */
+    public void handleViewDetail(View v) {
+        Intent newIntent = new Intent(MessagesActivity.this, ConversationActivity.class);
+        startActivity(newIntent);
     }
 }

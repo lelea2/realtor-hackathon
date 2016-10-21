@@ -30,13 +30,13 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="4dp"
             android:layout_gravity="center" />
-        <ImageView
-            android:id="@+id/filter"
-            android:src="@drawable/filter"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="right" />
+        <!--<ImageView-->
+            <!--android:id="@+id/filter"-->
+            <!--android:src="@drawable/filter"-->
+            <!--android:layout_width="30dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:layout_marginRight="10dp"-->
+            <!--android:layout_gravity="right" />-->
     </FrameLayout>
 </android.support.v7.widget.Toolbar>
