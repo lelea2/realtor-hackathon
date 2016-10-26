@@ -112,10 +112,10 @@ public class MainActivity extends AppCompatActivity implements FlingCardListener
 //                if (scrollProgressPercent < 0.25 && scrollProgressPercent > 0.2) {
 //                    shareAction();
 //                }
-                if (scrollProgressPercent > 0.2) {
-                    Intent newIntent = new Intent(MainActivity.this, ConversationActivity.class);
-                    startActivity(newIntent);
-                }
+//                if (scrollProgressPercent > 0.2) {
+//                    Intent newIntent = new Intent(MainActivity.this, ConversationActivity.class);
+//                    startActivity(newIntent);
+//                }
             }
         });
 
